@@ -11,6 +11,9 @@ export declare function setFillStyle(style: string): void;
 @external("canvas", "fillRect")
 export declare function fillRect(x: i32, y: i32, width: i32, height: i32): void;
 //@ts-ignore
+@external("canvas", "strokeRect")
+export declare function strokeRect(x: i32, y: i32, width: i32, height: i32): void;
+//@ts-ignore
 @external("canvas", "setFont")
 export declare function setFont(font: string): void;
 //@ts-ignore
@@ -54,3 +57,6 @@ export declare function fill(): void;
 //@ts-ignore
 @external("canvas", "setStrokeStyle")
 export declare function setStrokeStyle(style: string): void;
+//@ts-ignore
+@external("canvas", "setStrokeWidth")
+export declare function setStrokeWidth(width: i32): void;

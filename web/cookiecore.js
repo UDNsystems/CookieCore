@@ -62,15 +62,22 @@ const CookieCore = {
                         const text = _this.__liftString(textPtr);
                         _this.canvasCtx.fillStyle = text;
                     },
+                    // setFillStyle(fillthing){
+                    //   console.log(fillthing)
+                    //   _this.canvasCtx.fillStyle = fillthing;
+                    // },
                     fillRect(x, y, width, height) {
                         _this.canvasCtx.fillRect(x, y, width, height);
+                    },
+                    strokeRect(x, y, width, height) {
+                      _this.canvasCtx.strokeRect(x, y, width, height);
                     },
                     setFont(textPtr) {
                         const text = _this.__liftString(textPtr);
                         _this.canvasCtx.font = text;
                     },
                     clearRect(x, y, width, height) {
-                        _this.canvasCtx.fillRect(x, y, width, height);
+                        _this.canvasCtx.clearRect(x, y, width, height);
                     },
                     getWidth() {
                         return _this.canvas.width;
@@ -93,8 +100,15 @@ const CookieCore = {
                         const text = _this.__liftString(textPtr);
                         _this.canvasCtx.strokeStyle = text;
                     },
+                    setStrokeWidth(width) {
+                      _this.canvasCtx.lineWidth = width;
+                    }
+                    // setStrokeStyle(val) {
+                    //   console.log(val)
+                    //   _this.canvasCtx.strokeStyle = val
+                    // }
                 }
-            }
+            },
         );
         this.memory = module.instance.exports.memory;
         this.module = module;
